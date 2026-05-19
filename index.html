@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anatomia Topográfica de MMII — PWA</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="tag">Roteiro prático • Anatomia Humana</p>
+      <h1>Anatomia Topográfica de MMII</h1>
+      <p class="sub">Artérias, regiões e fáscias do membro inferior com cards interativos, zoom, campo extra de fotos e impressão em PDF.</p>
+    </div>
+    <div class="actions">
+      <button id="installBtn" class="btn primary">📲 Baixar app</button>
+      <button id="pdfBtn" class="btn">🖨️ Imprimir / PDF</button>
+      <button id="themeBtn" class="btn">🌙 Modo noite</button>
+    </div>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab active" data-tab="arterias">Artérias 1–39</button>
+    <button class="tab" data-tab="regioes">Regiões e fáscias 40–82</button>
+    <button class="tab" data-tab="extras">Fotos extras 83–99</button>
+  </nav>
+
+  <main>
+    <section id="arterias" class="panel active"><div class="grid" id="arteriasGrid"></div></section>
+    <section id="regioes" class="panel"><div class="grid" id="regioesGrid"></div></section>
+    <section id="extras" class="panel"><div class="grid" id="extrasGrid"></div></section>
+  </main>
+
+  <div id="modal" class="modal" aria-hidden="true">
+    <button id="closeModal" class="close">×</button>
+    <img id="modalImg" alt="Imagem ampliada" />
+    <p id="modalTitle"></p>
+  </div>
+
+  <footer>
+    <p>Para funcionar offline e instalar: mantenha este arquivo junto de manifest.json, sw.js, style.css, app.js e da pasta imagens.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
